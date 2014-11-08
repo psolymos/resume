@@ -1,0 +1,30 @@
+\documentclass[10pt,letterpaper,roman]{moderncv}
+
+\usepackage{SolymosCV}
+\cfoot{\color{color2}\itshape P\'{e}ter~S\'{o}lymos}
+
+\newtoggle{publications}
+\toggletrue{publications}
+
+\newtoggle{shortpubl}
+%\togglefalse{shortpubl}
+\toggletrue{shortpubl}
+
+\newtoggle{listsubmitted}
+\toggletrue{listsubmitted}
+
+\title{List of publications}
+
+\begin{document}
+\renewcommand*{\bibliographyhead}[1]{}
+
+\makecvtitle
+
+\thispagestyle{empty}
+
+\competitionnumber
+
+\input{parts/SolymosCVPublications}
+
+\end{document}
+

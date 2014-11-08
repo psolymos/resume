@@ -1,0 +1,100 @@
+%% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{banking}
+%% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 
+%%   'grey' and 'black'
+\moderncvcolor{blue}
+%% to set the default font; use '\sfdefault' for the default sans 
+%%   serif font, '\rmdefault' for the default roman one, or any tex font name
+%\renewcommand{\familydefault}{\sfdefault}         
+%% uncomment to suppress automatic page numbering for CVs longer than one page
+%\nopagenumbers{}                                  
+
+% character encoding
+\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage{t1enc}
+%\usepackage[latin2]{inputenc}
+%\usepackage[magyar]{babel}
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\usepackage[scale=0.8]{geometry}
+%% if you want to change the width of the column with the dates
+%\setlength{\hintscolumnwidth}{3cm}                
+%% for the 'classic' style, if you want to force the width 
+%%   allocated to your name and avoid line breaks. be careful though, 
+%%   the length is normally calculated to avoid any overlap with your 
+%%   personal info; use this at your own typographical risks...
+%\setlength{\makecvtitlenamewidth}{10cm}           
+\usepackage{xcolor}
+
+%% personal data
+\name{P\'{e}ter}{S\'{o}lymos}
+%\title{Resum\'{e}}
+%% optional, remove / comment the line if not wanted; 
+%%   the "postcode city" and "country" arguments can be omitted or 
+%%   provided empty
+\address{Alberta Biodiversity Monitoring Institute, CW 405, Biological Sciences Bldg.}{University of Alberta, Edmonton AB, T6G 2E9}{Canada}
+%\phone[mobile]{+1~(234)~567~890}
+\phone[fixed]{780~492~8534}
+\phone[fax]{780~492~7635}
+\email{solymos@ualberta.ca}
+\homepage{https://sites.google.com/site/psolymos/}
+%\homepage{psolymos.github.com}
+%\social[linkedin]{john.doe}
+%\social[twitter]{jdoe}
+%\social[github]{jdoe}
+%\extrainfo{additional information}
+%\photo[64pt][0.4pt]{picture}
+%\quote{Some quote}
+
+%% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+%% bibliography with mutiple entries
+\usepackage[resetlabels]{multibib}
+\newcites{paperpr,letterpr,procpr,inbook,report,subm}{{Full papers, peer-reviewed},{Letters, peer-reviewed},{Conference proceedings, peer-reviewed},{Book chapters},{Reports},{Submitted publications}}
+
+%\newcommand{\myname}[1]{\textit{S\'{o}lymos, P.}}
+%% underline myname in references
+\newcommand{\psolymos}{\underline{S\'{o}lymos, P.}}
+\newcommand{\studentname}[1]{\textit{#1}}
+
+%% usage: closing, firstname, lastname
+\newcommand{\makeletterclosingsigned}{
+  Sincerely,\\%
+  \includegraphics[width=40mm]{pic/SPsignoNew}\\%
+  {\bfseries P\'{e}ter~S\'{o}lymos}}
+
+%% usage: enclname, enclosure
+\newcommand{\formatenclosed}[1]{
+  {\color{color2}\itshape{#1}}}
+
+\newcommand{\formatenclosure}[1]{
+  \hspace*{5mm} {\color{color2}\itshape{#1}}}
+
+%% competition number
+\newcommand{\competitionnumber}{\textbf{Application for Adjunct Faculty Status}}
+%\newcommand{\competitionnumber}{\textbf{Openings for Permanent Research Scientists}}
+
+%% address of recipient
+\recipient{Adjunct Faculty Committee\\c/o Linda Christensen}{Department of Biological Sciences\\CW~405, Biological Sciences Building\\University of Alberta\\Edmonton, Alberta, Canada, T6G~2E9\\\vspace{4mm}\competitionnumber}
+%\recipient{Computational Ecology and \\Environment Science group (CEES)}{Microsoft Research Limited\\21 Station Road\\Cambridge, CB1 2FB, UK\\\vspace{4mm}\competitionnumber}
+\date{\today}
+\opening{Dear Sir or Madam,}
+\closing{Sincerely,}
+%% use an optional argument to use a string other than "Enclosure", 
+%%   or redefine \enclname
+%\enclosure[Attached]{curriculum vit\ae{}}
+
+%% tweaking cvtitle
+%% use: \Large, \LARGE, \huge, \Huge
+\renewcommand*{\namefont}{\huge\bfseries\upshape}
+\renewcommand*{\titlefont}{\huge\mdseries\upshape}
+
+\newcommand{\splogo}{\includegraphics[height=5mm]{pic/SPlogoNew2grey}}
+
+%% highlight
+\newcommand{\FIXME}[1]{\textcolor{red}{#1}}
+

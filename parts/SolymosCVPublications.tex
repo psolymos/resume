@@ -1,0 +1,164 @@
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+%%%% {plain}
+%%%% {apalike}
+%%%% {cbe}
+
+%Publications from a BibTeX file using the multibib package
+
+\iftoggle{publications}{%
+  Supervised students in \textit{italics}. \hfill Accurate as of \today
+}{%
+  \section{Publications}
+  Supervised students in \textit{italics}.
+}
+
+% full papers ---------------------------------------
+\iftoggle{publications}{%
+  \section{Full papers, peer-reviewed}
+}{%
+  \subsection{Full papers, peer-reviewed}
+}
+\nocitepaperpr{%
+  stralberg2015:paperpr,%
+  matsuoka2014:paperpr,%
+  patino2014a:paperpr,%
+  patino2014b:paperpr,%
+  kemencei2014:paperpr,%
+  burton2014:paperpr,%
+  mahon2014:paperpr,%
+  cumming2014:paperpr,%
+  solymos2013:paperpr,%
+  walker2012:paperpr,%
+  mayor2012:paperpr,%
+  matsuoka2012:paperpr,%
+  solymos2012a:paperpr,%
+  solymos2012b:paperpr,%
+  vilisics2011:paperpr,%
+  kemencei2011:paperpr,%
+  silvertown2011:paperpr,%
+  solymos2010:paperpr,%
+  feher2010:paperpr,%
+  solymos2009a:paperpr,%
+  solymos2009b:paperpr,%
+  solymos2009c:paperpr,%
+  hormung2009:paperpr,%
+  solymos2009d:paperpr,%
+  pallgergely2009:paperpr,%
+  solymos2008a:paperpr,%
+  solymos2008b:paperpr,%
+  solymos2008c:paperpr,%
+  vilisics2008:paperpr,%
+  nagy2007:paperpr,%
+  solymos2007a:paperpr,%
+  solymos2007b:paperpr,%
+  solymos2007c:paperpr,%
+  solymos2007d:paperpr,%
+  solymos2005:paperpr,%
+  vilisics2005:paperpr,%
+  solymos2004:paperpr,%
+  solymos2002:paperpr}
+\bibliographystylepaperpr{apalike}
+\bibliographypaperpr{bib/SolymosPaperPR}
+
+% letters ---------------------------------------
+\iftoggle{publications}{%
+  \section{Letters, peer-reviewed}
+}{%
+  \subsection{Letters, peer-reviewed}
+}
+\nociteletterpr{%
+  solymos2013:letterpr,%
+  haughland2010:letterpr%
+}
+\bibliographystyleletterpr{apalike}
+\bibliographyletterpr{bib/SolymosLetterPR}
+
+% proceedings ---------------------------------------
+\iftoggle{publications}{%
+  \section{Conference proceedings, peer-reviewed}
+}{%
+  \subsection{Conference proceedings, peer-reviewed}
+}
+\nociteprocpr{%
+  hornung2008:procpr,%
+  solymos2007:procpr,%
+  vilisics2007:procpr%
+}
+\bibliographystyleprocpr{apalike}
+\bibliographyprocpr{bib/SolymosBookProceedingsPR}
+
+% book chapters ---------------------------------------
+\iftoggle{publications}{%
+  \section{Book chapters}
+}{%
+  \subsection{Book chapters}
+}
+\nociteinbook{%
+  solymos2014:inbook,%
+  solymos2007:inbook,%
+  solymos2005:inbook%
+}
+\bibliographystyleinbook{apalike}
+\bibliographyinbook{bib/SolymosBookChapterNonPR}
+
+
+% reports ---------------------------------------
+\iftoggle{publications}{%
+  \section{Reports}
+}{%
+  \subsection{Reports}
+}
+\nocitereport{%
+  solymos2014:report,%
+  hache2014:report,%
+  schieck2013:report,%
+  ball2013:report,%
+  stralberg2013:report,%
+  solymos2012:report,%
+  schmiegelow2012:report,%
+  matsuoka2011a:report,%
+  solymos2011a:report,%
+  bayne2011:report,%
+  matsuoka2011b:report,%
+  solymos2011b:report,%
+  feher2009:report,
+  hornung2008:report%
+}
+\bibliographystylereport{apalike}
+\bibliographyreport{bib/SolymosReportsNonPR}
+
+
+% submitted ---------------------------------------
+\iftoggle{listsubmitted}{%
+\iftoggle{publications}{%
+  \section{Submitted publications}
+}{%
+  \subsection{Submitted publications}
+}
+\nocitesubm{%
+  nagy2014:subm,%
+  solymos2014:subm,%
+  kisfali2014:subm%
+}
+\bibliographystylesubm{apalike}
+\bibliographysubm{bib/SolymosSubmitted}
+}{}
+
+%% non PR here
+
+\iftoggle{shortpubl}{}{%
+Here comes non peer reviewed stuff.
+}
+
+%% forditott sorrendben az irodalmak
+%http://tex.stackexchange.com/questions/9768/multibib-reverse-label-or-sort-order
+
+%% nevek felkoverrel/dolttel
+%http://tex.stackexchange.com/questions/18664/underline-my-name-in-the-bibliography
+% S\'{o}lymos, P.

@@ -1,0 +1,103 @@
+\begin{multicols}{2}
+I am an \emph{ecologist} with a research focus on developing and applying state-of-the-art \emph{computational techniques} for big data sets to better inform \emph{conservation and management} of biodiversity over large spatial scales.
+\vspace{0.5pc}
+
+My research interests range widely in terms of taxonomic groups (birds, molluscs, arthropods, and vascular plants), and spatial scales (microhabitats, local, regional, continental, global).
+\vspace{0.5pc}
+
+To me, software development is the key to ensuring the integration of \emph{ecological theory} with available data; it also provides a competitive edge by being the first to try new approaches. 
+\vspace{0.5pc}
+
+\columnbreak
+\centering
+\includegraphics[width=0.5\textwidth]{pic/researchtriad1}
+\end{multicols}
+
+
+\section{ Spatial patterns and status of biodiversity } % ---------------
+
+I am using large spatial databases at the Alberta Biodiversity Monitoring Institute (ABMI) and the Boral Avian Modelling (BAM) project to build province-wide and boreal-wide predictive models for the habitat associations and distributions of many species, especially songbirds (see e.g.~papers \#32, 34 and 36). These models are used to (1) quantify the cumulative effects of \emph{multiple stressors} on species distribution and abundance (papers \#26 and 31, report \#11); (2) assess the importance and \emph{scale of landscape effects}; (3) evaluate the relative contributions of \emph{direct and indirect effects} of anthropogenic development across species; (4) identifying critical habitats for species at risk (see report \# 13); and (5) estimating populations sizes (see reports \# 13 and 14).
+As part of this work, I have led the development of methods that enabled us to standardize different data sources and account for imperfect detection (paper \#30). Results for the species monitored by ABMI are available at \url{http://species.abmi.ca}. This website exemplifies a content management system for providing information to support biodiversity conservation and management. The underlying workflow includes modules that update the data when new data is available, run models and create predictive maps and graphs to populate the content of the website which is recreated based on a templating mechanism.
+\vspace{0.5pc}
+
+The evolving nature of technologies used in biodiversity studies represent a key challenge as more and more organizations adopt \emph{data streaming} devices, such as radio telemetry, automated recording units and cameras.
+I am collaborator in a grant that aims to integrate these emerging technologies into standard protocols used by ABMI. Approaches that enable the integration among changing methodologies will play an important role in maintaining continuity. Same applies to the increasing volume of \emph{citizen science} data: those provide tremendous opportunities for research if combined with other sources of information. I will leverage existing collaborations and build new relationships to shape the future of biodiversity research by facilitating integration across different data sources.
+
+\section{ Understanding past and anticipating future changes } % ---------------
+
+Changes in biodiversity influence policy and management decisions. 
+Extensive trend data are, however, extremely rare to come by especially
+at remote areas not yet fully altered by human land use. Such areas,
+like the boreal forest, are experiencing rapid environmental
+changes, thus quantifying trends for biodiversity are of high importance.
+I am working on approximations that can use spatially extensive but
+temporally sparse data in autoregressive trend modeling. I use past data of 
+boreal birds and hierarchical models to estimate current trends in species'
+populations.
+\vspace{0.5pc}
+
+The direction and magnitude of anticipated future changes in populations and communities
+due to anthropogenic and climate changes are also important for
+making informed management decision. I am collaborating on varous projects
+that forecast species distributions into the future
+based on (1) projected climate change (paper \#36); 
+(2) projected land use change (paper \# 34 and report \# 11);
+and (3) combined effects of fire, forest harvest and climate change
+(paper \# 34).
+I will continue collaborating on future projections to incorporate
+important lag effects into projections and combine climate and land use
+change at continental extents.
+
+
+\section{ Quantifying key uncertainties } % ---------------
+
+Measurement error is present in every data set; its effect on results can vary greatly. \emph{Imperfect detection} is measurement error in the response variables. I have developed methods to account for detection error in the absence of temporal replication (paper \#28; \textbf{detect} R package) and to account for differences in sampling protocol (paper \#30). 
+Our approach to standardize heterogeneous survey data allowed us to evaluate future distribution and abundance of boreal songbirds (papers \#34 and 36).
+\vspace{0.5pc}
+
+An interesting spin-off project stemming from the detectability work is studying the effects of linear features on bird behaviour, numerical response and detectability. I am collaborating with Environment Canada staff scientists, USGS, and G.~Niemi at U.~Minnesota to quantify and attribute sources of this roadside bias. I am presenting preliminary results of this work at the Joint Ornithologist Meeting in September (Estes Park, CO) as an invited speaker. An important application of this work is the ability to combine roadside surveys (i.e.~North American Breeding Bird Surveys) with off-road data sets, thus significantly improving the ability to estimate population trends in remote areas.
+\vspace{0.5pc}
+
+Currently I am exploring continuous time removal models for heterogeneous singing rates (submitted ms.~\#5) and extending single-visit-based mixture models to overdispersed count data (collaboration with F.~Denes and S.~Beissinger at UC~Berkeley, and S.~Lele at U.~Alberta using raptor data from Brazilian cerrado). I am also collaborating with researchers in the Mountain Birdwatch Project (Upstate New York, Vermont) on estimating status and trend for Bicknell's Thrush, one of the most range restricted birds in North America. We are also looking at how conspecific and inter specific interactions affect singing behaviour, thus also detectability.
+\vspace{0.5pc}
+
+Measurement error is also present in the predictors: \emph{positional uncertainty}, height and age measurements from forest resource inventories, \emph{misclassification} of land cover classes, \emph{spatially varying errors} due to quality of available GIS products, and \emph{temporal mismatches} between predictors and observations are prime examples. I am addressing these issues by using regression calibration in species distribution models; and by using latent variables for censored predictors (forest height and age) where censoring endpoints vary by inventories. These efforts demonstrate that I am able to deal with key uncertainties in large scale data sets. One of my early papers (PhD chapter, paper \#7) used major axis regression, which is a well-known approach for simpler measurement error situations. McInerny and Purves (\emph{MEE} 2011) termed the errors-in-variables models as ``next generation`` of specis distribution modeling. These models are not yet part of mainstream statistical ecology as real-world applications are relatively rare. I have access to great data sets where measurement error comes into play, thus I plan to make significant contributions in this field of research to make it standard practice in ecology.
+\vspace{0.5pc}
+
+Other sources of uncertainties include prediction error in species distribution models and model uncertainty in ensemble models and variable selection. I am working on a few manuscripts that describe recent advances I have made in this area of research for the past two years, for example
+using entropy to quantify uncertainty in ensemble models, and regional assessment of prediction accuracy and precision (see reports in 2013 and 2014).
+
+
+\section{ Non-independence } % ---------------
+
+Independence is one of the most common statistical assumptions that is almost never fully satisfied in practice. Spatial, temporal, and phylogenetic non-independence is common in observational studies. 
+I have found that estimates of detectability in passerine birds are not independent of phylogeny and body size; and traits under selective pressures are strong predictors of detectability. Current approaches in the quantification of phylogenetic or trait-based diversity metrics do not take field-sampling-related biases into account. The magnitude and importance of this bias is largely unknown. I am exploring the relationship between detectability, phylogeny, body size, niche breadth, and breeding density in the context of \emph{allometric scaling laws}. 
+\vspace{0.5pc}
+
+I am collaborating with Z.~Feh\'{e}r (Hungarian Nat.~Hist.~Mus.) on testing \emph{non-adaptive radiations} using phylogenetic analysis and \emph{niche modeling} in the rock dwelling door snail genus \emph{Montenegrina}. Dr.~Feh\'{e}r is responsible for the phylogenetic analysis and systematic revision of the species/subspecies ($\sim$15/44) endemic to the Balkan Peninsula. I will build niche models using Maxent and resource selection functions (our \textbf{ResourceSelection} R package) to test niche conservatism and assess how niche characteristics relate to phylogenetic divergence. 
+\vspace{0.5pc}
+
+The \emph{distance decay relationship} of community similarity is a form of spatial inter dependence across species. I am extending the distance decay relationship to the case of spatial anisotropy (slope varies with direction), and working on hierarchical community models that can be used to test what predictors are responsible for the distance decay pattern (collaboration with E.~Azeria and S.~Lele at U.~Alberta).
+
+
+\section{Statistical software and high performance computing} %........
+
+I am collaborating on a number of open-source software packages for community ecology (\textbf{vegan} R package), presence-only and animal movement data (\textbf{ResourceSelection} R package), population viability analysis (\textbf{PVAClone} R package), correcting for detection error (\textbf{detect} R package), epidemiology (\textbf{epiR} R package), and genetic data analysis (\textbf{adegenet} R package). These packages represent important contributions to the research community.
+\vspace{0.5pc}
+
+Our ability to analyze \emph{large data} sets and to fit \emph{complex models} is often limited by conventional computational resources. Reduction of computing time can be achieved by using high performance computing (HPC) techniques, or through the use of innovative statistical approaches that simplify the problems. Examples for HPC that I am working on include using \emph{sparse matrices} to handle extremely large data sets (papers \#10 and 16; \textbf{mefa4} R package); development of low-level computing interfaces to fit complex \emph{hierarchical models} (paper \#21; \textbf{dclone} and \textbf{dcmle} R packages) to be used on multicore machines or distributed computing systems such as those provided by Compute Canada (e.g.~WestGrid with portable batch system). I also worked with the \textbf{vegan} team on incorporating parallel computing features into the package, which is one of the most widely used packages among ecologists (cited $\sim$900 times in 2013).
+\vspace{0.5pc}
+
+Innovative statistical approaches include conditional likelihood and composite likelihood models (collaboration with S.~Lele at U.~Alberta). These approaches reduce the parameter space and simplify the dependence structure in the data, thus make the estimating procedure more efficient due to better convergence properties and decreased computational costs.
+\vspace{0.5pc}
+
+Data cloning is a global optimization algorithm that uses Bayesian Markov chain Monte Carlo (MCMC) methods in likelihood based inference.
+I am the author of the \textbf{dclone} R package
+that implements estimating procedures for complex models using data cloning; sequential and parallel MCMC support is provided for JAGS, WinBUGS, OpenBUGS, and STAN.
+The \textbf{dcmle} R package provides integration across different MCMC platforms, so that the implementation of hierarchical models is simplified. The \textbf{PVAClone} R package is a proof of concept built on top of \textbf{dcmle}: it allows for likelihood based population viability analysis (PVA) and model selection in the presence of observation error and missing data. I am working with K.~Nadeem (Acadia U.) to explore the predictive properties of Bayesian and likelihood based PVA approaches using data sets from the Global Population Dynamics Database (GPDD).
+\vspace{0.5pc}
+
+Data cloning is a computer intensive method, thus I am collaborating with S.~Lele on computationally efficient inferential tools (parametric bootstrap, profile likelihood) for data cloning that complement the default asymptotic toolset, and on general algorithms for MCMC convergence diagnostics (including reversible jump MCMC with  D.~Campbell at Simon Fraser U.).
+I am working on a book with Dr.~Lele on data cloning 
+(\emph{A primer on data cloning: hierarchical models made easy}, ongoing negotiations with Chapman and Hall/CRC).
+My future plans include developing a course material related to the book chapters, and an extensive set of examples and tutorials (classic BUGS examples are already reworked at the package development website). My vision also includes a ``modeling marketplace`` where sharing and testing of hierarchical models can be done in a social environment. Such initiatives also seem to be a shared interest with the CEES group (Filzbach by D.~Purves) that I am keen to learn more about.

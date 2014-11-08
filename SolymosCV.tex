@@ -1,0 +1,55 @@
+\documentclass[11pt,letterpaper,roman]{moderncv}
+
+\usepackage{SolymosCV}
+%\cfoot{\color{color2}\itshape P\'{e}ter~S\'{o}lymos}
+
+%% this displays publications as part of CV
+%% and not as separate Publication list
+\newtoggle{publications}
+\togglefalse{publications}
+
+%% include short publications or not
+\newtoggle{shortpubl}
+\toggletrue{shortpubl}
+
+%% include submitted publications or not
+\newtoggle{listsubmitted}
+\toggletrue{listsubmitted}
+%\togglefalse{listsubmitted}
+
+%% change this to display Resume or CV
+%\title{R\'{e}sum\'{e}}
+%\title{Resume}
+\title{CV}
+
+\begin{document}
+\renewcommand*{\bibliographyhead}[1]{}
+
+\makecvtitle
+
+%\thispagestyle{empty}
+
+%\competitionnumber \\
+\hfill Accurate as of \today
+%\competitionnumber \hfill Accurate as of \today
+%\hfill Accurate as of \today
+
+\input{parts/SolymosCVResearch}
+%\input{parts/SolymosCVCitizenship}
+\input{parts/SolymosCVEmployment}
+\input{parts/SolymosCVEducation}
+\input{parts/SolymosCVPublications}
+%\input{parts/SolymosCVGrants}
+\input{parts/SolymosCVSkills}
+%\input{parts/SolymosCVDevelopment}
+\input{parts/SolymosCVPresentations}
+\input{parts/SolymosCVTeaching}
+%\input{parts/SolymosCVStudents}
+%\input{parts/SolymosCVConsulting}
+\input{parts/SolymosCVHonoursAwards}
+\input{parts/SolymosCVService}
+%\clearpage
+%\input{parts/SolymosCVReferences}
+
+\end{document}
+
