@@ -17,4 +17,4 @@ del *.Rout
 ::pdftk CCF12062014*.pdf cat output MathPracticeGrade3-4.pdf
 
 cp SolymosCV.pdf c:\Users\Peter\Dropbox\Public\SolymosCV.pdf
-cp SolymosPublications.pdf c:\Users\Peter\Dropbox\Public\SolymosPublicationss.pdf
+cp SolymosPublications.pdf c:\Users\Peter\Dropbox\Public\SolymosPublications.pdf
